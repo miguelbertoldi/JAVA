@@ -22,12 +22,12 @@ public class jvelha {
 				if(vencedor==1) {
 					 System.out.println("\n\nJogador 1 venceu!");
 				 }else{
-					 System.out.println("Jogador 2 venceu!");
+					 System.out.println("\n\nJogador 2 venceu!");
 				 }
 			 }
 		}
 		if(vencedor==3) {
-			System.out.println("\nEmpate!");
+			System.out.println("\n\nEmpate!");
 		}
 		
 		
