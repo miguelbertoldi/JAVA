@@ -1,8 +1,8 @@
-package velha;
+package nvc;
 
 import java.util.Scanner;
 
-public class jvelha {
+public class velha {
 	static Scanner ler = new Scanner(System.in);
 	static char[][] jogo = new char[3][3];
 	static int vez=1;
@@ -11,13 +11,14 @@ public class jvelha {
 		boolean teste;
 		int vencedor=3;
 		for(int i=0; i<9; i++) {
+			 mostrarTabela();
 			 teste = jogadas();
 			 if(!teste) {
 				 i--;
 			 }
-			 mostrarTabela();
 			 vencedor = verificacaoVencedor();
 			 if(vencedor!=3) {
+				mostrarTabela();
 				i=9;
 				if(vencedor==1) {
 					 System.out.println("\n\nJogador 1 venceu!");
