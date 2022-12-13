@@ -41,16 +41,15 @@ public class velha {
 		jogadaC = ler.nextInt();
 		
 		if(jogadaC<3 & jogadaC>=0 & jogadaL<3 & jogadaL>=0) {
-			if(jogo[jogadaL][jogadaC]!='X' & jogo[jogadaL][jogadaC]!='O') {
-				
-			if(vez==1) {					
-				jogo[jogadaL][jogadaC] = 'X';
-				vez=2;
-			}else {
-				jogo[jogadaL][jogadaC] = 'O';
-				vez=1;
-			}
-			teste=true;
+			if(jogo[jogadaL][jogadaC]!='X' & jogo[jogadaL][jogadaC]!='O') {	
+				if(vez==1) {					
+					jogo[jogadaL][jogadaC] = 'X';
+					vez=2;
+				}else {
+					jogo[jogadaL][jogadaC] = 'O';
+					vez=1;
+				}
+				teste=true;
 			}else {
 				System.out.println("Jogada inválida! Jogue novamente!");
 				teste=false;
