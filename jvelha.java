@@ -30,8 +30,6 @@ public class velha {
 		if(vencedor==3) {
 			System.out.println("\n\nEmpate!");
 		}
-		
-		
 	}
 	static boolean jogadas() {
 		boolean teste = false;
@@ -65,13 +63,6 @@ public class velha {
 		return teste;
 	}
 
-	static void gerarTabela() {
-		for(int i=0; i<3; i++) {
-			for(int j=0; j<3; j++) {
-				jogo[i][j] = '-';
-			}
-		}
-	}
 	static void mostrarTabela() {
 		
 		for(int i=0; i<3; i++) {
