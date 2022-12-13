@@ -54,7 +54,6 @@ public class velha {
 			}else {
 				System.out.println("Jogada inválida! Jogue novamente!");
 				teste=false;
-				
 			}
 		}else {
 			System.out.println("Jogada inválida! Jogue novamente!");
@@ -62,9 +61,7 @@ public class velha {
 		}
 		return teste;
 	}
-
 	static void mostrarTabela() {
-		
 		for(int i=0; i<3; i++) {
 			if(i>0) {			
 				System.out.printf("\n--------- \n");
@@ -95,7 +92,6 @@ public class velha {
 				vencedor=2;
 			}
 		}
-		
 		else {	
 		vencedor=3;
 		}
