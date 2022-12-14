@@ -1,5 +1,3 @@
-package jvelha;
-
 import javax.swing.JOptionPane;
 
 public class jvelhaa {
@@ -36,7 +34,6 @@ public class jvelhaa {
 		
 		jogadaL = Integer.parseInt(JOptionPane.showInputDialog("Digite a linha - Jogador " +vez));
 		jogadaC = Integer.parseInt(JOptionPane.showInputDialog("Digite a coluna - Jogador " +vez));
-		
 		if(jogadaC<3 & jogadaC>=0 & jogadaL<3 & jogadaL>=0) {
 			if(jogo[jogadaL][jogadaC]!='X' & jogo[jogadaL][jogadaC]!='O') {	
 				if(vez==1) {					
@@ -58,6 +55,13 @@ public class jvelhaa {
 		return teste;
 	}
 	static void mostrarTabela() {
+		for(int i=0; i<3; i++) {
+			for(int j=0; j<3; j++) {
+				if(jogo[i][j]=='\0') {
+					jogo[i][j] = '-';
+				}
+			}
+		}
 		JOptionPane.showMessageDialog(null, jogo[0][0] +"  |  " +jogo[0][1] +"  |  " +jogo[0][2] +"\n------------\n" +jogo[1][0] +"  |  " +jogo[1][1] +"  |  " +jogo[1][2] +"\n------------\n" +jogo[2][0] +"  |  " +jogo[2][1] +"  |  " +jogo[2][2]);
 	}
 	static int verificacaoVencedor() {
