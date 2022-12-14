@@ -1,10 +1,8 @@
 package jvelha;
 
-import java.util.Scanner;
 import javax.swing.JOptionPane;
 
 public class jvelhaa {
-	static Scanner ler = new Scanner(System.in);
 	static char[][] jogo = new char[3][3];
 	static int vez=1;
 	
@@ -50,11 +48,11 @@ public class jvelhaa {
 				}
 				teste=true;
 			}else {
-				JOptionPane.showMessageDialog(null, "Jogada inv·lida! Tente novamente!");
+				JOptionPane.showMessageDialog(null, "Jogada inv√°lida! Tente novamente!");
 				teste=false;
 			}
 		}else {
-			JOptionPane.showMessageDialog(null, "Jogada inv·lida! Tente novamente!");
+			JOptionPane.showMessageDialog(null, "Jogada inv√°lida! Tente novamente!");
 			teste=false;
 		}
 		return teste;
