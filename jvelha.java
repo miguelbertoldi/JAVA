@@ -2,9 +2,11 @@ import javax.swing.JOptionPane;
 public class jvelhaa {
 	static char[][] jogo = new char[3][3];
 	static int vez=1;
+	
 	public static void main(String[] args) {
 		boolean teste;
 		int vencedor=3;
+		
 		for(int i=0; i<9; i++) {
 			 mostrarTabela();
 			 teste = jogadas();
