@@ -1,8 +1,9 @@
-package nvc;
+package jvelha;
 
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
-public class velha {
+public class jvelhaa {
 	static Scanner ler = new Scanner(System.in);
 	static char[][] jogo = new char[3][3];
 	static int vez=1;
@@ -21,24 +22,22 @@ public class velha {
 				mostrarTabela();
 				i=9;
 				if(vencedor==1) {
-					 System.out.println("\n\nJogador 1 venceu!");
+					 JOptionPane.showMessageDialog(null, "Jogador 1 venceu!");
 				 }else{
-					 System.out.println("\n\nJogador 2 venceu!");
+					 JOptionPane.showMessageDialog(null, "Jogador 2 venceu!");
 				 }
 			 }
 		}
 		if(vencedor==3) {
-			System.out.println("\n\nEmpate!");
+			JOptionPane.showMessageDialog(null, "\n\nEmpate!");
 		}
 	}
 	static boolean jogadas() {
 		boolean teste = false;
 		int jogadaC, jogadaL;
 		
-		System.out.println("\n\nDigite a linha - Jogador " +vez);
-		jogadaL = ler.nextInt();
-		System.out.println("\nDigite a coluna - Jogador " +vez);
-		jogadaC = ler.nextInt();
+		jogadaL = Integer.parseInt(JOptionPane.showInputDialog("Digite a linha - Jogador " +vez));
+		jogadaC = Integer.parseInt(JOptionPane.showInputDialog("Digite a coluna - Jogador " +vez));
 		
 		if(jogadaC<3 & jogadaC>=0 & jogadaL<3 & jogadaL>=0) {
 			if(jogo[jogadaL][jogadaC]!='X' & jogo[jogadaL][jogadaC]!='O') {	
@@ -51,28 +50,17 @@ public class velha {
 				}
 				teste=true;
 			}else {
-				System.out.println("Jogada inv√°lida! Jogue novamente!");
+				JOptionPane.showMessageDialog(null, "Jogada inv·lida! Tente novamente!");
 				teste=false;
 			}
 		}else {
-			System.out.println("Jogada inv√°lida! Jogue novamente!");
+			JOptionPane.showMessageDialog(null, "Jogada inv·lida! Tente novamente!");
 			teste=false;
 		}
 		return teste;
 	}
 	static void mostrarTabela() {
-		for(int i=0; i<3; i++) {
-			if(i>0) {			
-				System.out.printf("\n--------- \n");
-				}
-			for(int j=0; j<3; j++) {
-				if(j<2) {					
-				System.out.printf(jogo[i][j] +" | ");
-				}else {
-					System.out.printf(jogo[i][j] + " ");
-				}
-			}
-		}
+		JOptionPane.showMessageDialog(null, jogo[0][0] +"  |  " +jogo[0][1] +"  |  " +jogo[0][2] +"\n------------\n" +jogo[1][0] +"  |  " +jogo[1][1] +"  |  " +jogo[1][2] +"\n------------\n" +jogo[2][0] +"  |  " +jogo[2][1] +"  |  " +jogo[2][2]);
 	}
 	static int verificacaoVencedor() {
 		int vencedor=3;
